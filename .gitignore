@@ -1,0 +1,10 @@
+# Ignorovat Jupyter checkpointy
+.ipynb_checkpoints/
+
+# Ignorovat Python cache
+__pycache__/
+*.pyc
+
+# Ignorovat virtuální prostředí
+bmi-env/
+
