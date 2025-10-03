@@ -1,4 +1,4 @@
-The Obesity Risk Prediction Dataset aims to estimate obesity levels based on individuals' eating habits, physical condition, and demographic factors from Mexico, Peru, and Colombia. It consists of 2,111 records and 17 attributes, with a labeled class variable "NObesity" categorizing individuals into the following obesity levels:
+The Obesity Risk Prediction Dataset aims to estimate obesity levels based on individuals' eating habits, physical condition, and demographic factors from Mexico, Peru, and Colombia. It consists of 2,111 records and 17 attributes, with a labelled class variable "NObesity" categorising individuals into the following obesity levels:
 
 Insufficient Weight
 
@@ -31,7 +31,7 @@ Alcohol consumption (CALC)
 
 Smoking status (SMOKE)
 
-Calories consumption monitoring (SCC)
+Calorie consumption monitoring (SCC)
 
 Physical activity frequency (FAF)
 
