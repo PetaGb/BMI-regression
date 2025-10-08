@@ -1,18 +1,18 @@
-# 🧠 Obesity Risk Prediction (BMI Regression)
+# Obesity Risk Prediction (BMI Regression)
 
 This project predicts **Body Mass Index (BMI)** based on individuals’ **eating habits, lifestyle**, and **demographics** using data from **Mexico, Peru, and Colombia**.  
 The dataset contains **2,111 records** and **17 features** describing habits such as diet, activity level, and technology use.
 
 ---
 
-## 🎯 Objective
+## Objective
 
 The original dataset classified individuals into seven obesity levels (`NObesity`).  
 I replaced this categorical label with a **continuous BMI variable**, enabling **regression-based modelling** — a more direct and interpretable approach to obesity prediction.
 
 ---
 
-## 📊 Features
+## Features
 
 | Feature | Description |
 |----------|-------------|
@@ -31,7 +31,7 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 
 ---
 
-## ⚙️ Modeling
+## Modeling
 
 - **Linear models** performed **very poorly**, as expected — overall correlations between variables were low.  
 - **Ensemble models** captured relationships far better.  
@@ -40,7 +40,7 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 
 ---
 
-## 📈 Results
+## Results
 
 | Metric | Result |
 |--------|---------|
@@ -50,7 +50,7 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 
 ---
 
-## 🔍 Key Insights
+## Key Insights
 
 - Most predictions are close to actual BMI, with a few notable outliers.  
 - Top predictors:  
