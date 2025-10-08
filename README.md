@@ -17,7 +17,7 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 - **Linear models** performed **very poorly**, as expected — overall correlations between variables were low.  
 - **Ensemble models** captured relationships far better.  
   - **Random Forest** slightly outperformed **Gradient Boosting** (87% vs 82%) while being simpler.  
-  - A minimal gap between **R²** and **CV scores** indicates **strong generalization**.
+  - Moreover, a minimal gap between **R²** and **CV scores** in **Random Forest** indicates **strong generalization**.
 
 ---
 
@@ -37,6 +37,4 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 - Top predictors:  
   1. `family_history_with_overweight`  
   2. `vegetable_consumption_freq`
-  3. `Age` (less reliable >50 due to limited samples)
-
-- Predictions for people **over 50** may be less reliable.
+  3. `Age` (less reliable for people over 50 due to limited samples)
