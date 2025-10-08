@@ -12,25 +12,6 @@ I replaced this categorical label with a **continuous BMI variable**, enabling *
 
 ---
 
-## Features
-
-| Feature | Description |
-|----------|-------------|
-| `FAVC` | Frequent consumption of high-caloric food |
-| `FCVC` | Frequency of vegetable consumption |
-| `NCP` | Number of main meals per day |
-| `CAEC` | Eating between meals |
-| `CH2O` | Daily water consumption |
-| `CALC` | Alcohol consumption |
-| `SMOKE` | Smoking status |
-| `SCC` | Calorie monitoring |
-| `FAF` | Physical activity frequency |
-| `TUE` | Time using technology |
-| `MTRANS` | Mode of transportation |
-| `family_history_with_overweight`, `Age`, ... | Demographics |
-
----
-
 ## Modeling
 
 - **Linear models** performed **very poorly**, as expected — overall correlations between variables were low.  
