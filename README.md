@@ -1,41 +1,73 @@
-The Obesity Risk Prediction Dataset aims to estimate obesity levels based on individuals' eating habits, physical condition, and demographic factors from Mexico, Peru, and Colombia. It consists of 2,111 records and 17 attributes, with a labelled class variable "NObesity" categorising individuals into the following obesity levels:
+# 🧠 Obesity Risk Prediction (BMI Regression)
 
-Insufficient Weight
+This project predicts **Body Mass Index (BMI)** based on individuals’ **eating habits, lifestyle**, and **demographics** using data from **Mexico, Peru, and Colombia**.  
+The dataset contains **2,111 records** and **17 features** describing habits such as diet, activity level, and technology use.
 
-Normal Weight
+---
 
-Overweight Level I
+## 🎯 Objective
 
-Overweight Level II
+The original dataset classified individuals into seven obesity levels (`NObesity`).  
+I replaced this categorical label with a **continuous BMI variable**, allowing for **regression-based modeling** — a more direct, interpretable approach to obesity prediction.
 
-Obesity Type I
+---
 
-Obesity Type II
+## 📊 Features
 
-Obesity Type III
+| Feature | Description |
+|----------|-------------|
+| `FAVC` | Frequent consumption of high-caloric food |
+| `FCVC` | Frequency of vegetable consumption |
+| `NCP` | Number of main meals per day |
+| `CAEC` | Eating between meals |
+| `CH2O` | Daily water consumption |
+| `CALC` | Alcohol consumption |
+| `SMOKE` | Smoking status |
+| `SCC` | Calorie monitoring |
+| `FAF` | Physical activity frequency |
+| `TUE` | Time using technology |
+| `MTRANS` | Mode of transportation |
+| `family_history_with_overweight`, `Age`, ... | Demographics |
 
-However, I decided to drop the "NObesity" attribute and replace it with the "BMI" (Body Mass Index) feature.  BMI provides a continuous metric for obesity that is more suited for regression-based models, offering a direct way to predict a numeric value associated with obesity rather than classifying it into categories.
-Features:
+---
 
-Frequent consumption of high-caloric food (FAVC)
+## ⚙️ Modeling
 
-Frequency of consumption of vegetables (FCVC)
+- **Linear models** performed **very poorly**, as expected — overall correlations between variables were low.  
+- **Ensemble models** captured relationships far better.  
+  - **Random Forest** slightly outperformed **Gradient Boosting** while being simpler.  
+  - A minimal gap between **R²** and **CV scores** indicates **strong generalization**.
 
-Number of main meals (NCP)
+---
 
-Consumption of food between meals (CAEC)
+## 📈 Results
 
-Daily water consumption (CH20)
+| Metric | Result |
+|--------|---------|
+| BMI ±20% Accuracy | **92%** |
+| BMI ±10% Accuracy | **78.5%** |
+| Largest Error | Real BMI **44** → Predicted **29** |
 
-Alcohol consumption (CALC)
+---
 
-Smoking status (SMOKE)
+## 🔍 Key Insights
 
-Calorie consumption monitoring (SCC)
+- Most predictions are close to actual BMI, with few notable outliers.  
+- Top predictors:  
+  1. `family_history_with_overweight`  
+  2. `FCVC` (vegetable consumption)  
+  3. `Age` (less reliable >50 due to limited samples)
 
-Physical activity frequency (FAF)
+---
 
-Time using technology devices (TUE)
+## 🧰 Tools
 
-Mode of transportation (MTRANS)
+**Python**, **Pandas**, **NumPy**, **Scikit-learn**, **Matplotlib**, **Jupyter Notebook**
 
+---
+
+## ✅ Summary
+
+- Regression gives a **continuous, interpretable measure** of obesity risk.  
+- **Ensemble methods** generalize well and outperform linear models.  
+- Predictions for people **over 50** may be less reliable.
